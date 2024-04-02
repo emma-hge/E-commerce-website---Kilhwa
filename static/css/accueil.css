@@ -1,0 +1,106 @@
+
+body {
+    margin: 0;
+    margin:0px;
+    padding: 0px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/******************** Barre navigation ********************/
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+nav .onglets{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+nav .onglets a{
+    font-size: 17px;
+    margin: 8px ;
+    cursor:pointer;
+    text-decoration: none;
+    color:#122424;
+}
+
+nav .onglets input{
+    margin: 8px 20px;
+    padding: 15px;
+    border-radius: 30px;
+    border:none;
+    background-color: #f2f2f2;
+    outline:none;
+}
+
+
+
+/******************** Header  ********************/
+
+header{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+header h1{
+    font-size: 50px;
+    max-width: 500px;
+    text-align:center;
+}
+
+/******************** Corps ********************/
+
+.container {
+    text-align: center;
+}
+
+.inline-image {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 25px; 
+    margin-top: 15px;
+    border-radius: 3px;
+}
+
+/******************** Fin de page ********************/
+
+footer{
+    margin-top: 100px;
+    background-color: #12242e;
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+footer .medias{
+    display: flex;
+}
+
+footer .medias p{
+    margin-right: 20px;
+
+}
+
+@media screen and (max-width: 600px){
+    nav .onglets .link, nav h1{
+      display:none;
+    }
+}

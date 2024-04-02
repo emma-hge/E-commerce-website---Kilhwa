@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Se connecter | Kilhwa</title>
+        <link rel="shortcut icon" href="/static/img/logo.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    </head>
+    <body>
+        <div align="center">
+            <div class="card square">
+                <div class="card-content">
+                    <a href="/"><img src="/static/img/kilhwa.png" class="logo"></a>
+            <h1>Veuillez vous connecter</h1>
+            <hr/>
+            <br>
+            <div class="form">
+                <form action="/login" method="post">  
+                    <form class="login-form">
+                        <input type="email" placeholder=" Votre email" id="email" name="email" required/>
+                        <br>
+                        <br>
+                        <input type="password" placeholder="Votre mot de passe" id="password" name="password" required/>
+                        <br>
+                            <label>
+                                <span style="font-size: 1.2em; color: #555;">Restez connecté</span>
+                                <input type="checkbox" name="rester-connecte" >
+                            </label>
+                        <button> Se connecter</button>
+                        <br>
+                        <div class="msg">{{ msg }}</div>
+                        <br>
+                        <hr/>
+                        <p class="message">Pas encore inscrit ?<a href="/register"> Créer un compte</a></p>
+                        </div>
+                        </div>
+                        </nobr>
+                    </form> 
+                </form>
+        </body>
+</html>
+

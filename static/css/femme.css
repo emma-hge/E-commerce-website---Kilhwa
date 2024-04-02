@@ -1,0 +1,109 @@
+
+body {
+    margin: 0;
+    margin:0px;
+    padding: 0px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/******************** Barre navigation ********************/
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+nav .onglets{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+nav .onglets a{
+    font-size: 17px;
+    margin : 8px;
+    cursor:pointer;
+    text-decoration: none;
+    color:#122424;
+}
+
+nav .onglets input{
+    margin: 8px 20px;
+    padding: 15px;
+    border-radius: 30px;
+    border:none;
+    background-color: #f2f2f2;
+    outline:none;
+}
+
+
+/******************** Les produits ********************/
+main {
+    padding: 40px;
+}
+
+.produit {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px; /* Réduire l'espacement entre les produits */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 17%;
+    text-align: center;
+    display: flex; /* Utiliser flexbox pour aligner les éléments au centre */
+    flex-direction: column; /* Afficher les éléments en colonne */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Modifier la justification */
+    margin: 0; /* Supprimer la marge par défaut */
+    padding: 0; /* Supprimer le rembourrage par défaut */
+}
+
+.produit img {
+    width: 80%; /* Modifier la taille des images */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.produit h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.panier_button {
+    padding: 8px 20px;
+    background-color: #213774;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.panier_button:hover {
+    background-color: #161e44;
+}

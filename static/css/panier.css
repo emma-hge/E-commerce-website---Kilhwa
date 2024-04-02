@@ -1,0 +1,148 @@
+
+body {
+    margin: 0;
+    margin:0px;
+    padding: 0px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/******************** Barre navigation ********************/
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+nav .onglets{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+nav .onglets a{
+    font-size: 17px;
+    margin : 8px;
+    cursor:pointer;
+    text-decoration: none;
+    color:#122424;
+}
+
+nav .onglets input{
+    margin: 8px 20px;
+    padding: 15px;
+    border-radius: 30px;
+    border:none;
+    background-color: #f2f2f2;
+    outline:none;
+}
+
+
+/******************** Header  ********************/
+
+header{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+header h1{
+    font-size: 50px;
+    max-width: 500px;
+    text-align:center;
+}
+
+main p{
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+main a{
+    text-align: right;
+    margin-left: 100px;
+    font-size: 15px;
+}
+
+/*** Affichage produits **/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produit {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.infos_produit {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-right: 20px; 
+}
+
+.infos_produit img {
+    margin-left: 20px; 
+    margin-right: 20px;
+    border-radius: 5px;
+    flex-shrink: 0; 
+    width: 110px; 
+    height: auto; /* Pour conserver les proportions de l'image */
+}
+
+.infos_produit p {
+    margin: 0;
+    flex-grow: 1; /* Pour que le texte des informations prenne tout l'espace disponible */
+}
+
+.total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.retirer_button {
+    margin-right: 15px; 
+    background-color: #720707;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.retirer_button:hover {
+    background-color: #420909;
+}
+
+.payer_button {
+    margin-top: 20px;
+    background-color: #0d2b4b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payer_button:hover {
+    background-color: #051322;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Panier | Kilhwa</title>
+        <link rel="shortcut icon" href="/static/img/logo.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/panier.css')}}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    </head>
+    <body>
+        <!-- Barre de navigation -->
+        <nav>
+            <a href="/"><img src="/static/img/kilhwa.png" class="logo"></a>
+            <div class="onglets">
+                <a href="/">Accueil</a>       
+                <a href="/femme">Femme</a>
+                <a href="/homme">Homme</a>
+                <a href="/accessoires">Accessoires</a>
+                <form>
+                    <input type="search" placeholder="Rechercher">
+                </form>
+                <a href="/login" class="far fa-user"> </a>
+                <a href="/panier" class="fas fa-shopping-cart"></a>
+            </div>
+        </nav>
+        <hr>
+        <header>
+            <h1>Votre Panier</h1>
+        </header>
+
+
+        <!-- Afficher le panier -->
+        <main>
+
+            {% for item in panier %}
+                <div class="produit">
+                    <form method="POST" action="{{ url_for('retirer_panier', panier_id=item[0]) }}">
+                        <button class="retirer_button" type="submit" >Retirer</button>
+                    </form>
+                    <div class="infos_produit">
+                        <img src="{{ url_for('static', filename='img/' + item[4]) }}" alt="{{ item[2] }}" width="10%">
+                        <p>{{ item[2] }} - {{ item[3] }} € - Quantité: {{ item[5] }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <p class="total"> {{ msg }} </p>
+
+            <form action="{{ url_for('payer') }}" method="post">
+                <button class="payer_button" type="submit">Payer</button>
+            </form>
+            <br>
+            <br>
+            <br>
+            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Inscription | Kilhwa</title>
+        <link rel="shortcut icon" href="/static/img/logo.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    </head>
+    <body>
+        <div align="center">
+            <div class="card square">
+                <div class="card-content">
+                    <a href="/"><img src="/static/img/kilhwa.png" class="logo"></a>
+            <h1>Veuillez vous connecter</h1>
+            <hr/>
+            <br>
+
+            <div class="form">
+                <form action="/register" method="post">  
+                    <form class="signup-form">
+                        <input type="email" placeholder="Votre email" id="email" name="email" />
+                        <br>
+                        <br>
+                        <input type="name" placeholder="Votre nom" id="name" name="name" />
+                        <br>
+                        <br>
+                        <input type="password" placeholder="Votre mot de passe" id="password" name="password"/>
+                        <br>
+                        <br>
+                        <input type="password" placeholder="Confirmez votre mot de passe" id="password" name="password"/>
+                            <label>
+                                <span>Restez connecté</span>
+                                <input type="checkbox" name="rester-connecte" >
+                            </label>
+                        <button>S'inscrire</button>
+                        <br>
+                        <br>
+                        <div class="msg">{{ msg }}</div>
+                        <br>
+                        <hr/>
+                        </div>
+                    </div>
+                </div>
+            </form> 
+        </form>
+    </body>
+</html>

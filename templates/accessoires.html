@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Accessoires | Kilhwa</title>
+        <link rel="shortcut icon" href="/static/img/logo.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/accessoires.css')}}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    </head>
+    <body>
+        <!-- Barre de navigation -->
+        <nav>
+            <a href="/"><img src="/static/img/kilhwa.png" class="logo"></a>
+            <div class="onglets">       
+                <a href="/">Accueil</a>
+                <a href="/femme">Femme</a>
+                <a href="/homme">Homme</a>
+                <a href="/accessoires">Accessoires</a>
+                <form>
+                    <input type="search" placeholder="Rechercher">
+                </form>
+                <a href="/login" class="far fa-user"> </a>
+                <a href="/panier" class="fas fa-shopping-cart"></a>
+            </div>
+        </nav>
+        <hr>
+    </body>
+    <main>
+
+         <!-- Afficher les produits -->
+        <ul>
+            {% for produit in produits %}
+                <div class="produit">
+                    <form action="{{ url_for('ajouter_panier', produit_id=produit[0]) }}" method="POST">
+                        <img src="{{ url_for('static', filename='img/' + produit[4]) }}" alt="{{ produit[1] }}" width="15%">
+                        <h2>{{ produit[1] }} - {{ produit[2] }} €</h2>
+                        <input type="number" name="quantite" value="1" min="1"> 
+                        <button class="panier_button" type="submit" name="ajouter_au_panier">Ajouter au Panier</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </ul>
+    </main>
+</html>

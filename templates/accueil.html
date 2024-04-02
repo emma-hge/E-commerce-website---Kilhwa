@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Accueil | Kilhwa</title>
+        <link rel="shortcut icon" href="/static/img/logo.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/accueil.css')}}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    </head>
+    <body>
+        <!-- Barre de navigation -->
+        <nav>
+            <a href="/"><img src="/static/img/kilhwa.png" class="logo"></a>
+            <div class="onglets"> 
+                <a href="/">Accueil</a> 
+                <a href="/femme">Femme</a>
+                <a href="/homme">Homme</a>
+                <a href="/accessoires">Accessoires</a>
+                <form>
+                    <input type="search" placeholder="Rechercher">
+                </form>
+                <a href="/login" class="far fa-user"> </a>
+                <a href="/panier" class="fas fa-shopping-cart"></a>
+            </div>
+
+        </nav>
+        <hr>
+
+        <!-- Header -->
+        <header>
+            <!--<h1>Votre style, notre inspiration.</h1>-->
+            <h1>Dress to impress.</h1>
+        </header>
+
+        <!-- Corps -->
+        <main>
+            <div class="container">
+                <img src="/static/img/doudoune_accueil.png" height=35% width=35% class="inline-image">
+                <img src="/static/img/homme_femme.png" height=52.5% width=52.5% class="inline-image">
+            </div>
+        </main>
+
+        <!-- Fin de page -->
+        <footer>
+            <p>&copy; Contactez-nous au 06 66 57 47 46</p>
+            <div class="medias">
+                <p><i class="fab fa-facebook-f"></i></p>
+                <p><i class="fab fa-twitter"></i></p>
+                <p><i class="fab fa-instagram"></i></p>
+            </div>
+        </footer>
+    </body>
+</html>
